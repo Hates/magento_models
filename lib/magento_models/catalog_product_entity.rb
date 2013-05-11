@@ -8,6 +8,7 @@ module MagentoModels
     has_many :varchars, class_name: "CatalogProductEntityVarchar", foreign_key: :entity_id
     has_many :texts, class_name: "CatalogProductEntityText", foreign_key: :entity_id
     has_many :datetimes, class_name: "CatalogProductEntityDatetime", foreign_key: :entity_id
+    has_many :media_galleries, class_name: "CatalogProductEntityMediaGallery", foreign_key: :entity_id
 
     def brand
       ints.attribute(119)
