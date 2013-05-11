@@ -1,7 +1,7 @@
 module MagentoModels
   class CatalogCategoryEntity < Base
-    self.set_primary_key "entity_id"
-    self.set_table_name "catalog_category_entity"
+    self.primary_key = "entity_id"
+    self.table_name = "catalog_category_entity"
 
     has_many :ints, class_name: "CatalogCategoryEntityInt", foreign_key: :entity_id
     has_many :varchars, class_name: "CatalogCategoryEntityVarchar", foreign_key: :entity_id
