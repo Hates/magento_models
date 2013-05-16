@@ -3,6 +3,8 @@ module MagentoModels
     self.primary_key = "entity_id"
     self.table_name = "catalog_product_entity"
 
+    has_one :stock_status, class_name: "CatalogInventoryStockStatus", foreign_key: :product_id
+
     has_many :ints, class_name: "CatalogProductEntityInt", foreign_key: :entity_id
     has_many :decimals, class_name: "CatalogProductEntityDecimal", foreign_key: :entity_id
     has_many :varchars, class_name: "CatalogProductEntityVarchar", foreign_key: :entity_id
