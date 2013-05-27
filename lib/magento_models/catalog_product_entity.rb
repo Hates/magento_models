@@ -11,6 +11,7 @@ module MagentoModels
     has_many :media_galleries, class_name: "CatalogProductEntityMediaGallery", foreign_key: :entity_id
     has_many :texts, class_name: "CatalogProductEntityText", foreign_key: :entity_id
     has_many :varchars, class_name: "CatalogProductEntityVarchar", foreign_key: :entity_id
+    has_many :reviews, class_name: "Review", foreign_key: :entity_pk_value
 
     def brand
       ints.attribute(119)
