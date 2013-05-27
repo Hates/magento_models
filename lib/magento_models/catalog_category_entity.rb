@@ -4,8 +4,8 @@ module MagentoModels
     self.table_name = "catalog_category_entity"
 
     has_many :ints, class_name: "CatalogCategoryEntityInt", foreign_key: :entity_id
-    has_many :varchars, class_name: "CatalogCategoryEntityVarchar", foreign_key: :entity_id
     has_many :texts, class_name: "CatalogCategoryEntityText", foreign_key: :entity_id
+    has_many :varchars, class_name: "CatalogCategoryEntityVarchar", foreign_key: :entity_id
 
     def name
       varchars.attribute(33)

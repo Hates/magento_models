@@ -5,12 +5,12 @@ module MagentoModels
 
     has_one :stock_status, class_name: "CatalogInventoryStockStatus", foreign_key: :product_id
 
-    has_many :ints, class_name: "CatalogProductEntityInt", foreign_key: :entity_id
-    has_many :decimals, class_name: "CatalogProductEntityDecimal", foreign_key: :entity_id
-    has_many :varchars, class_name: "CatalogProductEntityVarchar", foreign_key: :entity_id
-    has_many :texts, class_name: "CatalogProductEntityText", foreign_key: :entity_id
     has_many :datetimes, class_name: "CatalogProductEntityDatetime", foreign_key: :entity_id
+    has_many :decimals, class_name: "CatalogProductEntityDecimal", foreign_key: :entity_id
+    has_many :ints, class_name: "CatalogProductEntityInt", foreign_key: :entity_id
     has_many :media_galleries, class_name: "CatalogProductEntityMediaGallery", foreign_key: :entity_id
+    has_many :texts, class_name: "CatalogProductEntityText", foreign_key: :entity_id
+    has_many :varchars, class_name: "CatalogProductEntityVarchar", foreign_key: :entity_id
 
     def brand
       ints.attribute(119)
